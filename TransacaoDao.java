@@ -21,7 +21,7 @@ public class TransacaoDao {
 
 	public void cadastrar(Transacao transacao) {
 		try {			
-			String sql = "insert into transacoes (ticker, preco, quantidade, data, tipo)"; 
+			String sql = "insert into transacoes (ticker, preco, quantidade, data, tipo) values (?, ?, ?, ?, ?)";
 			
 			PreparedStatement ps = conexao.prepareStatement(sql);
 			ps.setString(1, transacao.getTicker());
