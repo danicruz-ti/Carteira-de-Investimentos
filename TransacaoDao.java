@@ -31,7 +31,10 @@ public class TransacaoDao {
 			ps.setString(5, transacao.getTipo().toString());
 			
 			ps.execute();
-			System.out.println("Resultado:" +ps.executeUpdate());
+			ps.close();
+			//System.out.println("Resultado:" +ps.executeUpdate());
+			
+			System.out.println("Adicionado.");
 						 
 		} catch (SQLException e) {
 		  e.printStackTrace();
@@ -53,13 +56,17 @@ public class TransacaoDao {
 				Transacao t = new Transacao();
 				
 				t.setTicker(rs.getString("ticker"));
-				t.setData(rs.getDate("data").toLocalDate());
 				t.setPreco(rs.getBigDecimal("preco"));
 				t.setQuantidade(rs.getInt("quantidade"));
+				t.setData(rs.getDate("data").toLocalDate());
 				t.setTipo(TipoTransacao.valueOf(rs.getString("tipo")));
 				
 				transacoes.add(t);
 			}
+			
+			rs.close();
+			ps.close();
+			
 			return transacoes;							
 		} catch (SQLException e) {
 			throw new RuntimeException(e);

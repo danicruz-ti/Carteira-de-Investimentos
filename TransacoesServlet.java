@@ -31,6 +31,8 @@ public class TransacoesServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {	
 		req.setAttribute("transacoes", dao.listar());
 		
+		///carteira/src/main/webapp/WEB-INF/jsp/transacoes.jsp
+		
 		req
 		.getRequestDispatcher("WEB-INF/jsp/transacoes.jsp")
 		.forward(req, res);	
@@ -50,9 +52,9 @@ public class TransacoesServlet extends HttpServlet {
 		
 		Transacao transacao = new Transacao(
 				ticker,
-				data,
 				preco,
 				quantidade,
+				data,
 				tipo);
 				
 		 

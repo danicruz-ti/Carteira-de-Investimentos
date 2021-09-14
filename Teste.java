@@ -10,7 +10,7 @@ import br.com.alura.carteira.modelo.Transacao;
 
 public class Teste {
 
-	public static void main(String[] args) {
+/*	public static void main(String[] args) {
 		Transacao t = new Transacao();
 		
 		t.setTicker("ITSA4");
@@ -34,6 +34,6 @@ public class Teste {
 		
 		System.out.println(t2);
 		
-	}
+	}*/
 
 }

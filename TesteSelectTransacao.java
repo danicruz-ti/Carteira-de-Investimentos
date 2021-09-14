@@ -11,7 +11,8 @@ import br.com.alura.carteira.modelo.Transacao;
 public class TesteSelectTransacao {
 	
 	public static void main(String [] args) {
-		try {
+		
+	/*	try {
 			String url = "jdbc:mysql://localhost:3306/carteira";
 			String usuario = "root";
 			String senha = "root";
@@ -27,6 +28,6 @@ public class TesteSelectTransacao {
 			}
 		} catch (SQLException e) {
 			System.out.println("Ocorreu um erro!");
-		}
+		}*/
 	}
 }
