@@ -28,7 +28,7 @@ public class TesteInsereTransacao {
 					200,
 					LocalDate.now(),
 					TipoTransacao.COMPRA);
-			
+			  
 			dao.cadastrar(transacao);	
 		} catch (Exception e) {
 			System.out.println("Ocorreu um erro!");
